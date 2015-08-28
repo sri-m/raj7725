@@ -1,0 +1,16 @@
+<%= semantic_form_for @contactu do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :name, :input_html => { :size => 20 } %>
+    <%= f.input :email, :input_html => { :size => 20 } %>
+    <%= f.input :cell, :input_html => { :size => 20 } %>
+    <%= f.input :gender, :as => :radio, :collection => ["Male", "Female"] %>
+    <%= f.input :dob %>
+    <%= f.input :group, :as => :select, :collection => Order.pluck(:ord_name) %>
+    <%= f.input :subject, :as => :check_boxes, :collection => ["Ruby", "Java"] %>
+    <%= f.input :address, :input_html => { :class => 'autogrow', :rows => 10, :cols => 20, :maxlength => 1000  } %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

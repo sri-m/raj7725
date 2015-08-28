@@ -1,0 +1,17 @@
+<ul>
+    <li><a href="/" class="current">Home</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html">Raj page</a></li>
+    <li><a href="about.html">Srini page</a></li>
+    <li><a href="/contactus/new">Contact</a></li>
+    <% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>  
+  </li>
+<% end %>
+</ul>

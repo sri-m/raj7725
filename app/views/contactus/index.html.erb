@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Contactus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Cell</th>
+      <th>Gender</th>
+      <th>Dob</th>
+      <th>Group</th>
+      <th>Subject</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contactus.each do |contactu| %>
+      <tr>
+        <td><%= contactu.name %></td>
+        <td><%= contactu.email %></td>
+        <td><%= contactu.cell %></td>
+        <td><%= contactu.gender %></td>
+        <td><%= contactu.dob %></td>
+        <td><%= contactu.group %></td>
+        <td><%= contactu.subject %></td>
+        <td><%= contactu.address %></td>
+        <td><%= link_to 'Show', contactu %></td>
+        <td><%= button_to 'Edit', edit_contactu_path(contactu) %></td>
+        <td><%= button_to 'Destroy', contactu, method: :delete, data: { confirm: 'Are you sure?' }, :class => "delete" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contactu', new_contactu_path %>

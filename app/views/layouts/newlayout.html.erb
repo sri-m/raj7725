@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sekher</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<div id="wrapper">
+    <!-- start header -->
+    <div id="header">
+        <h1>Gamberetto </h1>
+        <p> design By Free CSS Templates</p>
+    </div>
+    <!-- end header -->
+    <!-- start page -->
+    <div id="page">
+        <!-- start content -->
+        <div id="content">
+            <div class="bgtop">
+                <div  class="bgbtm">
+                    <div class="post">
+                        <%= yield %>
+                    </div>
+                    <div class="post">
+                        <h2 class="title">Risus Pellentesque</h2>
+                        <div class="entry">
+                            <blockquote>
+                                <p>&#8220;Praesent augue mauris, accumsan eget, ornare quis, consequat malesuada, leo.&#8221;</p>
+                            </blockquote>
+                            <p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. </p>
+                        </div>
+                        <p class="byline">Posted on August 25th, 2007 by <a href="#">admin</a> | <a href="#">Edit</a></p>
+                        <p class="meta"><a href="#" class="more">Read More</a> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <a href="#" class="comments">Comments (33)</a></p>
+                        <div style="clear: both;">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end content -->
+        <!-- start sidebar -->
+        <div id="sidebar">
+            <div class="bgtop">
+                <div class="bgbtm">
+                    <ul>
+                        <li>
+                            <h2>Categories</h2>
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="#">Consectetuer adipiscing elit</a></li>
+                                <li><a href="#">Metus aliquam pellentesque</a></li>
+                                <li><a href="#">Suspendisse iaculis mauris</a></li>
+                                <li><a href="#">Urnanet  molestie semper</a></li>
+                                <li><a href="#">Proin gravida orci porttitor</a></li>
+                            </ul>
+                        </li>
+                        <!-- archieves -->
+                        <%= render :partial => "registrations/mylogo" %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end sidebar -->
+    </div>
+</div>
+<!-- end page -->
+<div id="footer">
+    <p>&copy;2007 All Rights Reserved &nbsp;&bull;&nbsp; Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a></p>
+</div>
+<div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div></body>
+</html>
